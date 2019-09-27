@@ -2,10 +2,8 @@ body {
   margin: auto;
   padding: inherit;
   background-color: rgb(146, 184, 90);
-  width:1000px;
-
   display: grid;
-  grid-template-columns:10% 20% 60% 10%; 
+  grid-template-columns:10% 300px 700px 10%; 
   grid-template-rows:30% auto 15%;
   grid-template-areas: 
   ". header header ."
@@ -19,8 +17,8 @@ header {
 }
 header .header-foto img{
   position: absolute;
-  left: -165px;;
-
+  top: 0;
+  right: 0;
 }
 header .header-foto {
   position: absolute;
@@ -207,12 +205,6 @@ footer p > a {
 
 }
 
-@media (max-width: 1000px){
-  body{
-    width:100%;
-  }
-}
-
 @media (max-width: 735px){
   body {
     grid-template-columns:100%; 
@@ -224,6 +216,13 @@ footer p > a {
     "footer"
   }
 }
+
+@media (max-width: 1000px){
+  body{
+    width:100%;
+  }
+}
+
 
 @media (max-width: 550px) {
   header nav ul {
