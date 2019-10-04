@@ -248,3 +248,9 @@ footer p > a {
     display: block;
   }
 }
+
+@media (max-width: 1360px){
+  aside#sidebar #sponsors{
+    display: none;
+  }
+}
