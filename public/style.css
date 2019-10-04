@@ -3,7 +3,7 @@ body {
   padding: inherit;
   background-color: rgb(146, 184, 90);
   display: grid;
-  grid-template-columns:10% 300px 700px 10%; 
+  grid-template-columns:1fr 300px 700px 1fr; 
   grid-template-rows:30% auto 15%;
   grid-template-areas: 
   ". header header ."
@@ -205,7 +205,7 @@ footer p > a {
 
 }
 
-@media (max-width: 735px){
+@media (max-width: 1000px){
   body {
     grid-template-columns:100%; 
     grid-template-rows:auto auto auto 15%;
@@ -216,13 +216,6 @@ footer p > a {
     "footer"
   }
 }
-
-@media (max-width: 1000px){
-  body{
-    width:100%;
-  }
-}
-
 
 @media (max-width: 550px) {
   header nav ul {
@@ -238,7 +231,7 @@ footer p > a {
   }
 }
 
-@media (max-width: 1129px){
+@media (max-width: 844px){
   header .header-foto{
     display: none;
   }
