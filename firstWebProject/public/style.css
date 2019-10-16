@@ -1,0 +1,260 @@
+body {
+  margin: auto;
+  padding: inherit;
+  background-color: rgb(146, 184, 90);
+  display: grid;
+  grid-template-columns:1fr 300px 700px 1fr; 
+  grid-template-rows:30% auto 15%;
+  grid-template-areas: 
+  ". header header ."
+  ". sidebar main ."
+  "footer footer footer footer"
+}
+
+header {
+  position: relative;
+  grid-area: header;
+}
+header .header-foto img{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header .header-foto {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(89, 134, 21);
+  margin-top: 0;
+  padding: 3px 0;
+}
+header nav ul li {
+  display: block;
+  padding: 5px 10px;
+  background-color: rgb(124, 161, 67);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header h1 {
+  color: white;
+  background-color: #417112;
+  text-align: center;
+  padding: 5px;
+  display: none;
+}
+
+main {
+  background-color: white;
+  grid-area: main;
+}
+
+main h1 {
+  text-align: center;
+}
+main a {
+  color: rgb(146, 184, 90);
+}
+main h3 {
+  color: rgb(146, 184, 90);
+}
+main p {
+  text-align: left;
+}
+main article {
+  padding: 1%;
+}
+main .lfloat {
+}
+main .rfloat {
+}
+main ul#workshops-panels {
+  display: flex;
+  flex-wrap: wrap;
+}
+main ul#workshops-panels li {
+  display: block;
+  flex-basis: 120px;
+  margin: 5px;
+  padding: 15px;
+  background-color: khaki;
+  min-height: 120px;
+  text-align: center;
+  position: relative;
+}
+main ul#workshops-panels li:hover {
+  background-color: rosybrown;
+}
+
+main ul#workshops-panels li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+main table tbody tr:nth-child(2n){
+  background-color: aquamarine;
+  border: 2px solid black;
+}
+
+main #workshops-panels li:nth-child(2n){
+  background-color: darkolivegreen;
+  border: 2px solid black;
+}
+
+main table tbody{
+  border:1px red;
+}
+
+aside#sidebar {
+  background-color: white;
+  padding: 0.5%;
+  grid-area:sidebar;
+}
+aside#sidebar h2 {
+  color: rgb(146, 184, 90);
+  text-align: center;
+  margin: 0;
+  padding-top: 5%;
+}
+aside#sidebar #searchform fieldset {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  text-align: center;
+}
+aside#sidebar nav {
+  color: rgb(146, 184, 90);
+}
+aside#sidebar nav > ul {
+  color: rgb(146, 184, 90);
+}
+aside#sidebar nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(89, 134, 21);
+  margin-top: 0;
+  padding: 3px 0;
+}
+aside#sidebar nav ul li {
+  display: block;
+  padding: 5px 10px;
+  margin: 0 0 5px 0;
+  background-color: rgb(124, 161, 67);
+}
+aside#sidebar nav a {
+  color: white;
+  text-decoration: none;
+}
+
+aside#sidebar #sponsors {
+  position: fixed;
+  top: 40%;
+  right: 20px;
+  background-color: white;
+  border: 1px dashed black;
+  width: 150px;
+  padding: 2px;
+}
+
+aside#sidebar #sponsors h2 {
+  padding-bottom: 5%;
+}
+
+aside#sidebar #sponsors img {
+  transform: translateX(2px);
+}
+
+footer {
+  text-align: center;
+  background-color: white;
+  padding-bottom: 0.7%;
+  margin-top: 10px;
+  grid-area:footer;
+}
+footer p {
+  padding-top: 0.5%;
+}
+footer p > a {
+  color: rgb(146, 184, 90);
+}
+
+@media print {
+  header,
+  aside#sidebar,
+  footer {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  aside#sidebar #sponsors {
+    position: static;
+    border: 0;
+    width: initial;
+    padding: 0;
+  }
+
+}
+
+@media (max-width: 1000px){
+  body {
+    grid-template-columns:100%; 
+    grid-template-rows:auto auto auto 15%;
+    grid-template-areas: 
+    "header"
+    "main"
+    "sidebar"
+    "footer"
+  }
+}
+
+@media (max-width: 550px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  main table tbody th:first-child{
+    display: none;
+  }
+
+  main table tbody td:first-child{
+    display: none;
+  }
+}
+
+@media (max-width: 844px){
+  header .header-foto{
+    display: none;
+  }
+  header h1{
+    display: none;
+  }
+}
+
+@media (max-width: 631px){
+  header .site-banner{
+    display: none;
+  }
+  header h1{
+    display: block;
+  }
+}
+
+@media (max-width: 1360px){
+  aside#sidebar #sponsors{
+    display: none;
+  }
+}

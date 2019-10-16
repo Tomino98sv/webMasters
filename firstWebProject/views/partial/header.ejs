@@ -1,0 +1,14 @@
+<picture class="site-banner">
+  <img src="/images/itat2019-banner.png" alt="ITAT banner" width="631" height="156">
+</picture>
+<picture class="header-foto">
+  <img src="/images/foto-zornicka.png" alt="Hotel Zornička" width="209" height="157">
+</picture>
+<h1>ITAT 19.rocnik</h1>
+<nav>
+  <ul>
+    <% headerMenu.forEach((item) => { %>
+    <%- linkGenerator(item, page);%>
+    <% }) %>
+  </ul>
+</nav>

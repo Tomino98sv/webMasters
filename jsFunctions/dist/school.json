@@ -1,0 +1,25 @@
+[
+    {
+        "predmet": "wT",
+        "studenti": [
+            "Jano",
+            "Jozo"
+        ]
+    },
+    {
+        "predmet": "Ang",
+        "studenti": [
+            "Fero",
+            "Jozo",
+            "Anka"
+        ]
+    },
+    {
+        "predmet": "Android",
+        "studenti": [
+            "Jano",
+            "Jozo",
+            "Richard"
+        ]
+    }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "itatweb",
+  "version": "1.0.0",
+  "description": "ITAT 2019 web page",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "./node_modules/.bin/tsc-watch --onSuccess \"node ./dist/\""
+  },
+  "keywords": [],
+  "author": "Sovy academy",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.7.9",
+    "@types/lodash": "^4.14.141",
+    "tsc-watch": "^3.0.1",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "node": "^12.11.0"
+  }
+}
