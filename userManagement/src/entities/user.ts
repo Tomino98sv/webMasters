@@ -6,4 +6,18 @@ export class User {
         public lastLogin?: Date,
         public password:string = "0000"
     ){}
+    
+  toSkDate(date: Date): string {
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeStyle: 'long',
+      hour: '2-digit',
+      minute: '2-digit'
+    }
+
+    return this.lastLogin ? this.lastLogin.toLocaleTimeString('sk-SK', options) : 'nikdy'+Date.now();
+  }
 }

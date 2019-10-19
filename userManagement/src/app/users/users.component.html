@@ -1,5 +1,5 @@
 <h2>{{title}}</h2>
-
+<div *ngIf="alert" alert="danger" role="alert">{{alert}}</div>
 <ul class="list-group">
     <li *ngFor="let user of users" class="list-group-item">{{user.name}}, {{user.email}} {{user.id}} {{user.lastLogin}}</li>
 </ul>
@@ -15,11 +15,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users" (click) = "selectUser(user)">
+      <tr *ngFor="let user of users$ | async" (click) = "selectUser(user)">
             <td>{{user.id}}</td>
             <td>{{user.name}}</td>
             <td>{{user.email}}</td>
-            <td>{{user.lastLogin}}</td>
+            <td>{{user.toSkDate()}}</td>
             <td>{{user.password}}</td>
       </tr>
     </tbody>
