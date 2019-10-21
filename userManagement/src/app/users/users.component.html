@@ -1,27 +1,25 @@
 <h2>{{title}}</h2>
-<div *ngIf="alert" alert="danger" role="alert">{{alert}}</div>
-<ul class="list-group">
-    <li *ngFor="let user of users" class="list-group-item">{{user.name}}, {{user.email}} {{user.id}} {{user.lastLogin}}</li>
-</ul>
-<h2>{{title}}</h2>
+<div *ngIf="alert" class="alert alert-danger" role="alert">
+  {{alert}}
+</div>
 <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Meno</th>
-        <th scope="col">Email</th>
-        <th scope="col">Login</th>
-        <th scope="col">Password</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users$ | async" (click) = "selectUser(user)">
-            <td>{{user.id}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.email}}</td>
-            <td>{{user.toSkDate()}}</td>
-            <td>{{user.password}}</td>
-      </tr>
-    </tbody>
-  </table>
-  <p *ngIf = "selectedUser">Selected user:  {{selectedUser.name}}</p>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Meno</th>
+      <th>E-mail</th>
+      <th>Prihlásenie</th>
+      <th>Heslo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" (click)="selectUser(user)">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.getSkLastLogin()}}</td>
+      <td>{{user.password}}</td>
+    </tr>
+  </tbody>
+</table>
+<p *ngIf="selectedUser">Selected user: {{selectedUser.name}}</p>
